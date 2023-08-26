@@ -8,7 +8,7 @@ function Checkbox() {
     
     return ( 
       
-      <div>  <input type="checkbox" onChange={handleChange}> </div> 
+      <div>  <input type="checkbox" onChange={handleChange} /> </div> 
       
     ); 
     

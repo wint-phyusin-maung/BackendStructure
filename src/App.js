@@ -1,27 +1,18 @@
-import logo from './logo.svg';
 import './App.css';
 
-function App() {
-  
+//. Keys help React identify which items have changed, been added, or been removed in a list
+
+function App()
+{
+  const names = ['Khin','Moe','Kyaw','Thein','Maung'];
+
   return (
-    <div className='App'>
-       <Job salary={90000} position="Senior SDE" company="Amazon"/>
-       <Job salary={12000} position="Junior SDE"
-       company="Google"/>
-       <Job salary={10000} position="Project Manager"
-       company="Netflix"/>
+    <div className='app'>
+        {names.map((name,key) => {
+            return <h1 key={key}>{name}</h1>
+        })}
     </div>
   )
 }
 
-
-const Job = (props) => {
-  return (
-    <div className='job'>
-      {props.salary}
-      {props.position}
-      {props.company}
-    </div>
-  )
-}
 export default App;
