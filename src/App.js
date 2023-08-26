@@ -4,13 +4,17 @@ import './App.css';
 
 function App()
 {
-  const names = ['Khin','Moe','Kyaw','Thein','Maung'];
+  const users = [
+    {name: 'Khin', age: 21},
+    {name: 'Thein', age: 25},
+    {name: 'Jessica', age: 35}
+  ]
 
   return (
     <div className='app'>
-        {names.map((name,key) => {
-            return <h1 key={key}>{name}</h1>
-        })}
+      {users.map((user,key) => {
+        return <h1 key={key}>{user.name}{user.age}</h1>
+      })}
     </div>
   )
 }
