@@ -9,3 +9,5 @@
 4. **sequelize-cli**: Command Line Interface for Sequelize. Simplifies Sequelize project management.
 
 5. **mysql2**: Fast MySQL driver for Node.js. Simplifies MySQL database interactions.
+
+6. **nodemon**: automatically restarts node application
