@@ -6,9 +6,11 @@ const PORT = process.env.PORT || 3000;
 app.use(express.json()) //middle parsing json string to javascript object 
 
 
+require('dotenv').config();
+
 //connectiong to mongodb 
 const mongoose = require('mongoose');
-const uri = "mongodb+srv://admin:1234@cluster0.18i6drc.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0";
+const uri = process.env.MONGODB_URI;
 async function connect() {
     try {
         await mongoose.connect(uri, {
@@ -26,8 +28,6 @@ connect();
 const userRoutes = require('./routes/userRoutes');
 
 app.use('/api/users', userRoutes)
-
-
 
 app.listen(PORT, () => {
     console.log(`Server is running on port ${PORT}`);
